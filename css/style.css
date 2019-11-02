@@ -10,7 +10,9 @@ html, body{
 }
 
 #welcome h1{
-	font-size: 40px;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
 }
 
 #welcome a{

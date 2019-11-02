@@ -23,7 +23,6 @@ if(links && links.length > 0){
                     imgTag.src = image;
     
                     setTimeout(() => {
-                        console.log(imgTag.naturalWidth)
                         if(imgTag.naturalWidth < 2800){
                             imgTag.classList.add('image-is-one');
                         }else{
@@ -37,3 +36,14 @@ if(links && links.length > 0){
         });
     }
 }
+
+// const saveLink = document.getElementById('save-bd-as-png').addEventListener('click', e => {
+//     e.preventDefault();
+//     html2canvas(document.querySelector('#display-images')).then(canvasElm => {
+//         const canvasUrl = canvasElm.toDataURL('png');
+//         const link  = document.createElement('a');
+//         link.href = canvasUrl;
+//         link.download = 'image.png';
+//         link.click()
+//     });
+// });
