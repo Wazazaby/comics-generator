@@ -22,14 +22,14 @@ for(let link of links){
                 imgTag.src = image;
 
 				setTimeout(() => {
-					if(imgTag.naturalWidth > 3000){
-						imgTag.classList.add('image-is-two');
-					}else{
-						imgTag.classList.add('image-is-one');
-					}
+                    if(imgTag.naturalWidth < 2800){
+                        imgTag.classList.add('image-is-one');
+                    }else{
+                        imgTag.classList.add('image-is-two');
+                    }
 				}, 500);
 
-				displayImages.appendChild(imgTag);
+                displayImages.appendChild(imgTag);
 			}
 		}
 	});
