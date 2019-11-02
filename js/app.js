@@ -59,5 +59,5 @@ document.getElementById('save-comic').addEventListener('click', event => {
 	html2canvas(bd).then(canvas => {
     	const base64image = canvas.toDataURL("image/png");
     	window.open(base64image , "_blank");
-    }
+    });
 });
