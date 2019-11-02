@@ -43,6 +43,7 @@ const saveAs = (uri, filename) => {
 
     if(typeof(link.download) === 'string'){
       	link.href = uri;
+      	console.dir(link)
       	link.download = filename;
       	document.body.appendChild(link);
       	link.click();
@@ -54,6 +55,7 @@ const saveAs = (uri, filename) => {
 
 document.getElementById('save-comic').addEventListener('click', event => {
 	const bd = document.getElementById('display-images');
+	console.log(bd)
 
 	html2canvas(bd).then(canvas => {
     	saveAs(canvas.toDataURL(), 'bd-toto.png');
