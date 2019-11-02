@@ -38,20 +38,20 @@ for(let link of links){
 	});
 }
 
-const saveAs = (uri, filename) => {
-    const link = document.createElement('a');
+// const saveAs = (uri, filename) => {
+//     const link = document.createElement('a');
 
-    if(typeof(link.download) === 'string'){
-      	link.href = uri;
-      	console.dir(link)
-      	link.download = filename;
-      	document.body.appendChild(link);
-      	link.click();
-      	document.body.removeChild(link);
-    }else{
-      	window.open(uri);
-    }
-}
+//     if(typeof(link.download) === 'string'){
+//       	link.href = uri;
+//       	console.dir(link)
+//       	link.download = filename;
+//       	document.body.appendChild(link);
+//       	link.click();
+//       	document.body.removeChild(link);
+//     }else{
+//       	window.open(uri);
+//     }
+// }
 
 document.getElementById('save-comic').addEventListener('click', event => {
 	const bd = document.getElementById('display-images');
