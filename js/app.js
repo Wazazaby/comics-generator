@@ -56,7 +56,6 @@ document.getElementById('save-comic').addEventListener('click', event => {
 	const bd = document.getElementById('display-images');
 
 	html2canvas(bd).then(canvas => {
-    	let test = canvas.toDataURL()
-    	console.log(test)
+    	saveAs(canvas.toDataURL(), 'bd-toto.png');
 	});
 });
