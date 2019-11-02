@@ -56,8 +56,9 @@ const saveAs = (uri, filename) => {
 document.getElementById('save-comic').addEventListener('click', event => {
 	const bd = document.getElementById('display-images');
 
-	html2canvas(bd).then(canvas => {
-    	const base64image = canvas.toDataURL("image/png");
-    	window.open(base64image , "_blank");
+	html2canvas(document.body).then(canvas => {
+	    canvas.toBlob(blob => {
+	        window.saveAs(blob, "yourwebsite_screenshot.png");
+	    });
     });
 });
