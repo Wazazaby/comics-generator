@@ -22,7 +22,6 @@ for(let link of links){
                 imgTag.src = image;
 
 				setTimeout(() => {
-                    console.log(imgTag.naturalWidth)
 					if(imgTag.naturalWidth > 3000){
 						imgTag.classList.add('image-is-two');
 					}else{
