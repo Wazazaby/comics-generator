@@ -55,9 +55,9 @@ const saveAs = (uri, filename) => {
 
 document.getElementById('save-comic').addEventListener('click', event => {
 	const bd = document.getElementById('display-images');
-	console.log(bd)
 
 	html2canvas(bd).then(canvas => {
-    	saveAs(canvas.toDataURL(), 'bd-toto.png');
-	});
+    	const base64image = canvas.toDataURL("image/png");
+    	window.open(base64image , "_blank");
+    }
 });
