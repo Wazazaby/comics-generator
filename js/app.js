@@ -22,12 +22,13 @@ for(let link of links){
                 imgTag.src = image;
 
 				setTimeout(() => {
+                    console.log(naturalWidth)
 					if(imgTag.naturalWidth > 3000){
 						imgTag.classList.add('image-is-two');
 					}else{
 						imgTag.classList.add('image-is-one');
 					}
-				}, 100);
+				}, 500);
 
 				displayImages.appendChild(imgTag);
 			}
