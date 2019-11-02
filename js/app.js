@@ -1,5 +1,3 @@
-//const firstTitle = document.querySelector('#option-set-1 h2');
-//const typed = new Typed(firstTitle, {strings: [firstTitle.dataset.myText], showCursor: false, typeSpeed: 10});
 const links = document.querySelectorAll('.options .column a');
 
 for(let link of links){
@@ -37,29 +35,3 @@ for(let link of links){
 		}
 	});
 }
-
-// const saveAs = (uri, filename) => {
-//     const link = document.createElement('a');
-
-//     if(typeof(link.download) === 'string'){
-//       	link.href = uri;
-//       	console.dir(link)
-//       	link.download = filename;
-//       	document.body.appendChild(link);
-//       	link.click();
-//       	document.body.removeChild(link);
-//     }else{
-//       	window.open(uri);
-//     }
-// }
-
-setTimeout(() => {
-	document.getElementById('save-comic').addEventListener('click', event => {
-		const bd = document.getElementById('display-images');
-
-		html2canvas(bd).then(canvas => {
-		    var base64image = canvas.toDataURL("image/png");
-	    	window.open(base64image , "_blank");
-	    });
-	});
-}, 5000);
