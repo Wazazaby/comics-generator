@@ -17,8 +17,10 @@ html, body{
 	font-size: 40px;
 }
 
-h2{
-	font-size: 40px;
+.story-telling h2{
+    font-size: 40px;
+    text-align: justify;
+    text-align-last: center;
 }
 
 .is-hidden{
@@ -52,19 +54,28 @@ h2{
 	text-align: center;
 }
 
-.column{
-	position: relative;
+.hover-card{
+    position: relative;
 	padding: 1.75em;
 	transition: all 0.2s;
 }
 
-.column a{
-	position: absolute;
+.hover-card a{
+    position: absolute;
 	bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	left: 50px;
 	right: 50px;
+}
+
+.hover-card:hover{
+	background-color: gainsboro;
+	border-radius: 5px;
+	transform: translate(0, -10px);
+}
+
+.column a{
 	font-size: 20px;
 }
 
@@ -75,29 +86,14 @@ h2{
 	margin-bottom: 70px;
 }
 
-.column:hover{
-	background-color: gainsboro;
-	border-radius: 5px;
-	transform: translate(0, -10px);
-}
-
 .story-telling{
 	width: 100%;
 }
 
-.story-telling h2{
-	text-align: justify;
-}
-
-#floating-btn{
-	position: absolute;
-	top: 30px;
-	left: 30px;
-}
-
 #display-images{
 	overflow-y: scroll;
-	position: relative;
+    position: relative;
+    padding-top: 50px;
 }
 
 #display-images .replay-btn{
@@ -113,4 +109,14 @@ h2{
 
 .image-is-two{
 	max-width: 50%;
+}
+
+@media only screen and (max-width: 1024px){
+    .image-is-one{
+        max-width: 50%;
+    }
+
+    .image-is-two{
+        max-width: 100%;
+    }
 }
