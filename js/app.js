@@ -40,12 +40,14 @@ if(links && links.length > 0){
 const saveLink = document.getElementById('save-bd-as-png').addEventListener('click', e => {
     e.preventDefault();
     html2canvas(document.querySelector('#display-images'), {useCORS: true}).then(canvasElm => {
-        const canvasUrl = canvasElm.toDataURL('png');
-        console.log(canvasUrl);
-        const link  = document.createElement('a');
-        link.href = canvasUrl;
-        link.download = 'image.png';
-        console.log(link);
-        link.click()
+        console.log(canvasElm)
+        //const canvasUrl = canvasElm.toDataURL('png');
+        //const link  = document.createElement('a');
+        //window.open(canvasElm.toDataURL('image/png'));
+        //link.href = canvasUrl;
+        //link.download = 'image.png';
+        //link.click()
+
+        Canvas2Image.saveAsPNG(canvasElm, 500, 1000);
     });
 });
