@@ -36,23 +36,3 @@ if(links && links.length > 0){
         });
     }
 }
-
-const saveLink = document.getElementById('save-bd-as-png').addEventListener('click', e => {
-    e.preventDefault();
-    html2canvas(document.querySelector('#display-images'), {useCORS: true}).then(canvasElm => {
-        console.dir(canvasElm)
-        const canvasUrl = canvasElm.toDataURL('image/png');
-        if(canvasUrl.indexOf('image/octet-stream')){
-            canvasUrl.replace('data:image/octet-stream;base64,', '');
-        }else if(canvasUrl.indexOf('image/png')){
-            canvasUrl.replace('data:image/png;base64,', '');
-        }
-        console.log(canvasUrl);
-
-        const link  = document.createElement('a');
-        window.open(canvasElm.toDataURL('image/png'));
-        link.href = canvasUrl;
-        link.download = 'image.png';
-        link.click()
-    });
-});
